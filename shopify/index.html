@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo{
+            width: 10rem;
+        }
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1fff9;
+        }
+        img{
+            max-width: 100%;
+        }
+        input{
+            max-width: 100%;
+            font-weight: bold;
+        }
+        .intro{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: radial-gradient(circle at 0 0,#5fd5b6 0,#5fd5b600 30%),linear-gradient(180deg,#79dfffb3 -10%,#79dfff00 70%),radial-gradient(circle at 95% 0,#d0f224 0,#5fd5b600 20%);  
+            padding: 0 25rem;
+        }
+        .introtitle{
+            font-size: 4rem;
+        }
+        .intobutton{
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+        }
+        .intro .content{
+            padding: 0 1rem;
+        }
+      
+        .cards{
+            padding: 2.5rem 3rem; 
+
+        }
+        .card{
+            width: 25rem;
+            margin-left: 3rem;
+        }
+        .cardText .text{
+            font-size: 1.2rem;
+
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            border: solid;
+            border-radius: 5rem;
+            padding: 0.2rem;
+            width: 40rem;
+            text-emphasis: start;
+
+        }
+        input[type="button"]{
+            width: 11rem;
+            border: none;
+            border-radius: 6rem;
+        }
+        input[type=text]{
+            background-color: transparent;
+            color: gray;
+            font-size: 1rem;
+            padding: 1.5rem;
+            width: 18rem;
+            border: 0;
+        }
+        
+        .sponsor ,.cards{
+            display: flex;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap; 
+                
+        
+        }
+        .sponsor{
+            border: solid;
+            border-width: 0.1rem 0;
+            display: flex;
+            justify-content: center;
+            margin:  6rem;
+            padding: 2rem 1rem ;
+        }
+        .sponsor img{
+            font-weight: bold;
+            margin: 1rem 1.3rem;
+        }
+        .quotetitle{
+            margin: 0 5rem;
+            margin-top: 5rem;
+            font-size: 3.5rem;
+        }
+        .quotesubtitle{
+            font-weight: 100;
+            font-size: 1.8rem;
+
+            margin-bottom: 5rem;
+         }
+        .collapsibleContent{
+            display: none;
+        }
+        .CallToAction{
+            background-image: radial-gradient(circle at -48% 130%,#d0f224aa 30%,#054a49 46%);
+            color: white;
+            padding: 5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .CallToActionTitle{
+            font-size: 3.5rem;
+        }
+        .CallToActionSubtitle{
+            font-size: 1.5rem;
+
+            font-weight: 100;
+            margin-bottom: 2.5rem;
+        }
+        .CallToAction input[type=text]{
+            border-color: white;
+        }
+        .CallToAction button{
+            background-color: transparent ;
+            color: white;
+        }
+        .promo{
+            padding-top: 1rem;
+            max-width: 40rem;
+            font-size: 0.8rem;
+        }
+        .FQA{
+            padding: 10rem 18rem;
+
+        }
+        .FQA .title{
+            margin: 1.5rem 0;
+            font-size: 3.5rem;
+        }
+        .buttons button{
+            text-align: start;
+            background-color: transparent;
+            border: solid;
+            border-width: 0;
+            border-bottom-width: 0.05rem;
+            padding: 1.5rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+            width: 100%;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .documents{
+            display: flex;
+            margin: 2rem 0;
+            justify-content: end;
+            text-decoration: underline;
+        }
+        .doc{
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-left: 3.5rem;
+        }
+        @media only screen and (max-width:600px){
+            input[type=text]{   
+                background-color: transparent;
+                color: gray;
+                width: 18rem;
+                border:solid;
+                border-radius: 5rem;
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            input[type="button"]{
+                width: 21rem;
+                font-size: 1rem;
+
+                padding: 1rem 1.5rem;
+            }
+            form{
+                display: block;
+                border: none;
+                width: 100%;
+            }
+            .intro{
+                padding: 0 ;
+            }
+            .introtitle{
+                font-size: 2.5rem;
+            }
+            .intobutton{
+                background-color: black;
+                color: white;
+                font-weight: bolder;
+            }
+            .promo{
+                font-size: 0.8rem;
+                padding: 1rem 1rem;
+            }
+            .introsubtitle{
+                font-weight: 100;
+            }
+            .sponsor img{
+                font-weight: bold;
+                margin: 1rem 0.5rem;
+            }
+            
+            .introimg{
+                width: 20rem;
+            }
+            .cards{
+                padding: 1rem;
+            }
+            .cards img, .cards .title , .cards .text{
+                margin: 0.2rem 0;
+            }
+            .card{
+                margin-bottom: 2.5rem;
+            }
+            .sponsor{
+                border: solid;
+                border-width: 0.1rem 0;
+                display: flex;
+                justify-content: space-between;
+                margin: 0 2rem;
+                padding: 2rem 0rem ;
+            }
+
+            .sponsor img{
+                width: 9rem;
+                font-weight: bold;
+                margin: 1rem 0;
+            }
+            .quotetitle{
+                margin: 0;
+
+                margin-top: 5rem;
+                font-size: 2.5rem;
+            }
+            .quotesubtitle{
+               font-weight: 100;
+               margin-bottom: 5rem;
+            }
+            .CallToAction{
+                background-image: none;
+                            background-color: #054a49 ;
+
+                padding: 4rem 1.2rem;
+            }
+            .CallToActionTitle{
+                font-size: 2.5rem;
+            }
+            .CallToActionSubtitle{
+                font-size: 1.2rem;
+
+                font-weight: 100;
+                margin-bottom: 2.5rem;
+            }
+            .FQA{
+                padding: 3rem 1rem;
+                
+            }
+            .FQA .title{
+                margin: 0;;
+                font-size: 2.5rem;
+            }
+            .FQA button{
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            .doc{
+                font-weight: bold;
+                font-size: 1rem;
+                margin-left: 2rem;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="intro" style="  text-align: center;">
+        <div class="content">
+            <img class="logo" src="https://i.ibb.co/wcFDpG5/kisspng-shopify-e-commerce-logo-magento-sales-5b0a2bf532b236-4196606915273932692077.png" alt="kisspng-shopify-e-commerce-logo-magento-sales-5b0a2bf532b236-4196606915273932692077" border="0" />
+            <h1 class="introtitle">Bring your ideas to life for $1/month</h1>
+            <h3 class="introsubtitle">The future of business is yours to shape. Sign up for a free trial and enjoy 3 months of Shopify for $1/month on select plans.</h3>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Enter you email address">
+            <input class="intobutton"type="button"  value="Start free trial">
+        </form>
+        <p class="promo">Try Shopify free for 3 days, no credit card required. By entering your email, you agree to receive marketing emails from Shopify.</p>
+        <img class="introimg"src="https://i.ibb.co/Ms2QzBj/image.png" alt="image" border="0" />
+    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="https://i.ibb.co/6wzQpqp/image.png" alt="image" border="0" />
+            <div class="cardText">
+                <h2 class="title">Customizable templates</h2>
+                <p class="text">A safe and efficient platform</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/64nfWp6/image.png" alt="image" border="0" />
+            <div class="cardText">
+                <h2 class="title"> All in one</h2>
+                <p class="text">Shopify takes care of everything from marketing and payments to secure transactions and shipping.</p>
+
+            </div>        
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/th33GXT/image.png" alt="image" border="0" />
+            <div class="cardText">
+                <h2 class="title">A safe and efficient platform</h2>
+                <p class="text">Millions of users trust Shopify to manage their online stores.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="sponsor" style="text-align:center">
+        <img src="https://i.ibb.co/jJz5TH1/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/2tVh6Z4/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/8sYxGPF/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/w0CMtR8/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/8D2CBYy/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/TrHVdwz/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/KX7CN8s/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/b3NJ7px/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/cwFSxhb/image.png" alt="image" border="0">
+        <img src="https://i.ibb.co/q1D1pky/image.png" alt="image" border="0">
+    </div>
+    <div clas="quote" style="  text-align: center;">
+        <h1 class="quotetitle">"Shopify is better than any other platform we've played with, and we've played with them all."</h1>
+        <h3 class="quotesubtitle">Jonathon Bayme, CEO of Theory11</h3>
+    </div>
+    <div class="CallToAction" style="  text-align: center;"> 
+        <h1 class="CallToActionTitle">Build your dream business for $1/month</h1>
+        <h2 class="CallToActionSubtitle">Start your free trial and enjoy 3 months of Shopify for $1/month on select plans.</h2>
+        <form action="">
+            <input type="text" placeholder="Enter you email address">
+            <input style="border-color:white "type="button"  value="Start free trial">
+        </form>
+        <p class="promo">Try Shopify free for 3 days, no credit card required. By entering your email, you agree to receive marketing emails from Shopify.</p>
+
+    </div>
+    <div class="FQA">
+        <h1 class="title">FAQ</h1>
+        <div class="buttons">
+            <div>
+                <button class="collapsible">What is Shopify and how does it work?</button>
+                <div class="collapsibleContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio delectus eos labore nostrum laborum, repellendus laboriosam cum? Maiores exercitationem recusandae nemo ipsa accusamus, inventore quam, rem sit, ipsam error ea.</div>
+            </div>
+            <div>
+                <button class="collapsible">How much does Shopify cost?</button>
+                <div class="collapsibleContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio delectus eos labore nostrum laborum, repellendus laboriosam cum? Maiores exercitationem recusandae nemo ipsa accusamus, inventore quam, rem sit, ipsam error ea.</div>
+            </div>
+            <div>
+                <button class="collapsible">Can I use my own domain name with Shopify?</button>
+                <div class="collapsibleContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio delectus eos labore nostrum laborum, repellendus laboriosam cum? Maiores exercitationem recusandae nemo ipsa accusamus, inventore quam, rem sit, ipsam error ea.</div>
+            </div>
+            <div>
+                <button class="collapsible">Do I need to be a designer or developer to use Shopify?</button>
+                <div class="collapsibleContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio delectus eos labore nostrum laborum, repellendus laboriosam cum? Maiores exercitationem recusandae nemo ipsa accusamus, inventore quam, rem sit, ipsam error ea.</div>
+            </div>
+        </div>
+        <div class="documents">
+            <p class="doc">Terms of Service</p>
+            <p  class="doc">Privacy Policy</p>
+        </div>
+    </div>
+    
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+          });
+        }
+     
+    </script>
+</body>
+</html>

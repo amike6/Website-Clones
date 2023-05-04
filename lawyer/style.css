@@ -1,0 +1,87 @@
+.introbckgrd{
+    background-image: url('img/laywer.jpg');
+    width: 100%;
+    height: 300px;
+    z-index:-1;
+}
+
+
+.intro{
+    min-height:100%;
+    background:url(img/laywer.jpg) rgba(0, 0, 0, 0.5);
+    background-size:cover;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 630px;
+    color: white;  
+}    
+.desc{
+    background-color: black;
+    color: white;
+    height: 300px;
+
+}
+li::marker{
+    color: red;
+    margin: 10px;
+
+}
+li{
+    margin: 10px;
+}
+.list{
+    margin: 10px;
+}
+.info{
+    background-color: #bd805c;
+    width: 500px;
+    height: 350px;
+}
+.info input[type=text]{
+    background-color: transparent;
+    color:white;
+    margin:10px;
+    border: none;
+    border-bottom: solid;
+}
+.info input[type=text]::placeholder{
+    background-color: transparent;
+    color:white;
+}
+.data input[type=text]{
+    background-color: transparent;
+    color: #bd805c;
+    margin:10px;
+    border: none;
+    border-bottom: solid;
+}
+.data input[type=text]::placeholder{
+    background-color: transparent;
+    color:#bd805c;
+}
+input[type=submit],  button{
+    background-color:#d90000;
+    border: none;
+    color: white;
+}
+.boder{
+    border-color: white;
+    border: solid;
+    padding: 30px;
+    margin: 30px;
+}
+.info_intro{
+    width: 100%;
+}
+.practice-border{
+    border:solid; 
+    border-color: #bd805c;
+    padding: 10px;
+    margin: 20px;
+}
+.practice-bg{
+    margin: 40px;
+    background-color: white;
+    color: #bd805c;
+
+}

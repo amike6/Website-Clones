@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navcontent{
+            display: flex;
+            justify-content: space-between;
+            height: 2.7rem;
+            background-image: linear-gradient( rgb(0, 0, 0,1),rgb(0, 0, 0,0) );
+            padding: 2.5rem 2.5rem;
+        }
+        .lang{
+           margin-right: 1.5rem;
+        }
+        .logo{
+            height: 100%;
+        }
+        .lang,.SignIn{
+            height: 100%;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+        .lang, .footerlang{
+            background-color: transparent;
+            border-color: white;
+        }
+        .SignIn{
+            background-color: #e50914;
+            border-color: #e50914;
+        }
+        .ourStory{
+            padding: 5rem 3rem;
+        }
+        .ourStory .title{
+            margin: 0;
+            font-size: 5rem;
+        }
+        .ourStory .subtitle{
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+        .AskEmail{
+            font-weight: 100;
+        }
+        form{
+            height: 4rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .emailSec, .emailBtn{
+            border: none;
+            padding: 0;
+            height: 100%;
+        }
+        .emailBtn{
+            width: 15rem;
+            background-color: #e50914;
+            font-size: 1.5rem;
+        }
+        .emailSec{
+            padding-left: 0.5rem;
+            width: 30rem;
+        }
+        button{
+            color: white;
+            border-radius: 0.10rem;
+            height: 100%;
+        }
+        
+        .txtcnt{
+            text-align: center;
+        }
+        .intro{
+            background-image: url('https://i.ibb.co/Wy9Try5/CA-en-20221128-popsignuptwoweeks-perspective-alpha-website-large.jpg');
+            box-shadow: inset 2rem 1rem 10rem 3rem rgba(0, 0, 0, 0.9);
+            background-size: 100%  100%;
+            background-color:rgb(0, 0, 0,0.8);
+            width: 100%;
+            height: 100%;
+        } 
+        .panel{
+            border: 0px;
+            border-bottom: 0.4rem;  
+            border-style: solid;
+                     
+            border-color: #222;
+            padding: 6rem 7rem;
+            display: flex;
+        }
+        .paneltext{
+            width: 70%;
+            padding: 0 5rem;
+        }
+        .paneltext .title{
+            margin: 0;
+            font-size: 3rem;
+        }
+        .paneltext .secText{
+            margin: 2rem 0rem;
+            font-size: 2rem;
+            font-weight: 100;
+        }
+        .panelimg img{
+            width: 100%;
+        }
+        .rev{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .fqa{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .collapsible{
+            
+        }
+        .collapsiblecontent{
+            display: none;
+        }
+        .footer{
+            padding: 2rem 2rem;
+            color: gray;
+
+        }
+        .fqa .title{
+            font-size: 3rem;
+            margin: 2rem 0;
+            padding-bottom: 1.5rem;
+        }
+        .fqaSec {
+            text-align: start;
+            display: block;
+            color: white;
+            font-size: 2rem;
+            width: 50rem; 
+            margin-bottom: 0.75rem;
+      
+        }
+        .collapsible,.collapsiblecontent{
+            background-color: #303030;
+            padding: 1rem 1.2rem;
+
+        }
+        .AskEmail{
+            margin: 2rem 0;
+        }
+        .collapsiblecontent{
+            margin-top: 0.1rem;
+        }
+        .footer{
+            padding: 3rem;
+        }
+        .footertitle{
+            padding: 1rem 0;
+
+        }
+        table td{
+            padding: 1rem 0;
+        }
+       @media only screen and (max-width: 600px){
+        .navcontent{
+            height: 2rem;
+
+            padding: 1.5rem 1.5rem;
+        }
+        .intro{
+            background-size: 200%  100%;
+        }
+        .lang{
+            margin-right: 0.5rem;
+         }
+        .ourStory{
+            padding: 3rem 3rem;
+        }
+        .ourStory .title{
+            font-size: 1.9rem;
+            font-weight: bold;
+
+        }
+        .ourStory .subtitle{
+            font-size: 1rem;
+        }
+        .AskEmail{
+            font-size: 0.9rem;
+            font-weight: bold;
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .emailSec{
+            margin: 0.5rem 0;
+            padding: 0.8rem 0.5rem;
+            width:100%;
+        }
+        .emailBtn{
+            margin: 0.2rem 0;
+            padding: 1rem 1.5rem;
+            color: white;
+            background-color: rgb(202, 18, 18);
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 0.15rem            
+        }
+        .panel{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+
+        }
+        .paneltext{
+            text-align: center;
+            padding: 0;
+            width: 100%;
+        }
+        .paneltext .title{
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .paneltext .secText{
+            margin: 1rem 0;
+
+            font-size: 1.1rem;
+        }
+        .panelimg img{
+            width: 100%;
+        }
+        .rev{
+            display: block;
+            padding: none;
+        }
+        .fqa {
+            padding: 1.5rem 0;
+        }
+        .fqa .title{
+            font-size: 2rem;
+            margin: 0;
+            padding-bottom: 1.5rem;
+        }
+        .fqaSec {
+            font-size: 1.3rem;
+          width: 100%;
+        }
+        .fqaSec .collapsible,.fqaSec .collapsiblecontent{
+            padding-left: 1rem;
+        }
+        .fourStory{
+            padding: 1rem 3rem;
+        }
+        .footerlang{
+            margin-top: 2rem;
+
+        }
+        .footerlang{
+            padding: 0.5rem;
+        }
+        .lang,.SignIn{
+            padding: 0 0.5rem;
+        }
+        .lang{
+            margin-right: 0.5rem;
+        }
+        .AskEmail{
+            margin-top: 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <div class="nav">
+            <div class="navcontent">
+                <div class="logo" >
+                <img class="logo" src="https://i.ibb.co/R2ZR9GF/download-removebg-preview.png" alt="download-removebg-preview" border="0" />
+                </div>
+                <div class="navbtns" >
+                    <button class=" lang">English</button>
+                    <button class=" SignIn">Sign In</button>
+                </div>
+            </div>
+        </div>
+        <div class="ourStory txtcnt">
+            <h1 class="title">Unlimited movies, TV <br>shows, and more.</h1>
+            <h2 class="subtitle">Watch anywhere. Cancel anytime.</h2>
+
+            <h3 class="AskEmail">Ready to watch? Enter your email to create or restart your membership.</h3>
+            <form class="emailform" action="" method="get">
+                <input class='emailSec'type="text" placeholder="Email address">
+                <button class='emailBtn'>Get Started</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="panel">
+        <div class="paneltext">
+            <h2 class="title">Enjoy on your TV.</h2>
+            <h3 class="secText">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
+        </div>
+        <div class="panelimg">
+            <img src="https://i.ibb.co/cQ3LMvd/tv.png" alt="tv" border="0" />
+        </div>
+    </div>
+
+    <div class=" panel">
+        <div class="paneltext">
+            <h2 class="title">Watch everywhere.</h2>
+            <h3 class="secText">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h3>
+        </div>
+        <div class="panelimg">
+            <img src="https://i.ibb.co/F0mjPgR/device-pile-removebg-preview.png" alt="device-pile-removebg-preview" border="0" />
+        </div>
+    </div>
+    <div class="rev panel">
+        <div class="paneltext">
+            <h2 class="title">Create profiles for kids.</h2>
+            <h3 class="secText">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h3>        </div>
+        <div class="panelimg">
+            <img src="https://i.ibb.co/s5TX75t/AAAABfpn-X3dbgj-Z-Je8-Ax3xn0k-Xeh-Zm-5-L6-xe6-YSTq-ucht9-TI5jw-DMqus-WZKNYT8-Df-Gud-D0-w-WVVTFLi-N2.png" alt="AAAABfpn-X3dbgj-Z-Je8-Ax3xn0k-Xeh-Zm-5-L6-xe6-YSTq-ucht9-TI5jw-DMqus-WZKNYT8-Df-Gud-D0-w-WVVTFLi-N2" border="0" />
+        </div>
+    </div>
+    <div class="panel">
+        <div class="paneltext">
+            <h2 class="title">Download your shows to watch offline.</h2>
+            <h3 class="secText">Available on all plans except Basic with ads.</h3>
+        </div>
+        <div class="panelimg">
+            <img src="https://i.ibb.co/c88y4qw/mobile-0819.jpg" alt="mobile-0819" border="0" />
+        </div>
+    </div>
+
+    <div class=" fqa panel" >
+        <h2 class="title txtcnt">Frequently Asked Questions</h2>
+        <div class="fqaSec">
+            <div class="collapsible">What is Netflix?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">What is Netflix?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> 
+        </div>
+        <div class="fqaSec">
+          <div class="collapsible">How much dose Netflix cost?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>  
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">What’s different on Basic with ads?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">Where can I watch?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> 
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">How  do I cancle?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">What can I watch on netflex?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        <div class="fqaSec">
+            <div class="collapsible">Is netflix Good for Kids?</div>
+            <div class="collapsiblecontent">
+                <p>Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        
+        <div class="fourStory txtcnt">
+            <h3 class="AskEmail">Ready to watch? Enter your email to create or restart your membership.</h3>
+            <form action="" method="get">
+                <input class='emailSec'type="text" placeholder="Email address">
+                <button class='emailBtn'>Get Started</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer ">
+        <div class="footertitle">Questions? Call 1-844-542-4813</div>
+        <table style="width: 100%">
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>Account</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>Investor Relations</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+        </table>
+
+        <button class="footerlang">English</button>
+        <p>Netflix Canada</p>
+
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+          });
+        }
+     
+    </script>
+</body>
+</html>
